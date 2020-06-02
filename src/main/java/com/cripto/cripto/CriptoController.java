@@ -51,7 +51,7 @@ public class CriptoController {
 	}
 
 	@GetMapping(value = "/extended-euklid-gcd/{x}/{y}")
-	public GeneralContainer exteuklidovGCD(@PathVariable String x, @PathVariable String y) {
+	public GeneralContainer exteuklidGCD(@PathVariable String x, @PathVariable String y) {
 		BigInteger a = new BigInteger(x);
 	    BigInteger b = new BigInteger(y);
 		return criptoService.exteuklidovGCD(a, b);
