@@ -45,18 +45,18 @@ public class CriptoController {
     }
 
     @GetMapping(value = "/big-multiplication/{x}/{y}/{z}")
-    public BigInteger findmoduloMultiplication(@PathVariable String x, @PathVariable String y, @PathVariable String z) {
-        BigInteger a = new BigInteger(x);
-        BigInteger b = new BigInteger(y);
-        BigInteger m = new BigInteger(z);
+    public BigInteger findmoduloMultiplication(@PathVariable String firstNumber, @PathVariable String secondNumber, @PathVariable String modulo) {
+        BigInteger a = new BigInteger(firstNumber);
+        BigInteger b = new BigInteger(secondNumber);
+        BigInteger m = new BigInteger(modulo);
         return criptoService.findmoduloMultiplication(a, b, m);
     }
 
     @GetMapping(value = "/big-d/{x}/{y}/{z}")
-    public BigInteger findmodulodivision(@PathVariable String x, @PathVariable String y, @PathVariable String z) {
-        BigInteger a = new BigInteger(x);
-        BigInteger b = new BigInteger(y);
-        BigInteger m = new BigInteger(z);
+    public BigInteger findmodulodivision(@PathVariable String firstNumber, @PathVariable String secondNumber, @PathVariable String modulo) {
+        BigInteger a = new BigInteger(firstNumber);
+        BigInteger b = new BigInteger(secondNumber);
+        BigInteger m = new BigInteger(modulo);
         return criptoService.findmodulodivision(a, b, m);
     }
 
@@ -68,10 +68,10 @@ public class CriptoController {
     }
 
     @GetMapping(value = "/big-exp/{x}/{y}/{z}")
-    public BigInteger findmoduloexponenation(@PathVariable String x, @PathVariable String y, @PathVariable String z) {
-        BigInteger a = new BigInteger(x);
-        BigInteger b = new BigInteger(y);
-        BigInteger m = new BigInteger(z);
+    public BigInteger findmoduloexponenation(@PathVariable String firstNumber, @PathVariable String secondNumber, @PathVariable String modulo) {
+        BigInteger a = new BigInteger(firstNumber);
+        BigInteger b = new BigInteger(secondNumber);
+        BigInteger m = new BigInteger(modulo);
         return criptoService.findmoduloexponenation(a, b, m);
     }
 
